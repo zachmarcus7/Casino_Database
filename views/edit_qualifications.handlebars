@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Edit Dealer Qualifications</title>
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+    	<button>Menu</button>
+    	<div class="menu_links">
+    		  <a href="/">Index</a>
+    		  <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+    	</div>
+    </div>
+   </div>
+    <div class="table_container">
+      <h2>Add Dealer Qualification:</h2>
+      <label>Dealer: </label>
+      <select name="dealer_ID" id="dealer_ID">
+        <option value=""></option>
+        {{#each dealer}}
+        <option value="{{dealer_ID}}">{{dealer_fname}} {{dealer_lname}}</option>
+        {{/each}}
+      </select>
+      <br>
+      <label>Qualification: </label>
+      <select name="qualification_ID" id="qualification_ID">
+        <option value=""></option>
+        {{#each qual}}
+        <option value="{{qualification_ID}}">{{qualification_name}}</option>
+        {{/each}}
+      </select>
+      <br>
+      <button type="button" id="addButton" class="buttons">Add</button>
+    </div>
+
+    <div class="table_container">
+      <table id="table">
+        <h2>Qualifications:</h2>
+          <thead>
+            <tr>
+              <th>Dealer ID</th>
+              <th>Qualification</th>
+              <th>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+  	      </tbody>
+            {{#each dealer_qual}}
+            <tr>
+              <td>{{dealer_fname}} {{dealer_lname}}</td>
+              <td>{{qualification_name}}</td>
+              <td>{{qualification_difficulty}}</td>
+              <td><button type="button" id="{{qualification_ID}}" value="{{dealer_ID}}" class="updateButton">Update</button></td>
+              <td><button type="button" id="{{qualification_ID}}" value="{{dealer_ID}}" class="deleteButton">Delete</button></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+	
+ </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {{#each cssstyles}}
+    <link rel="stylesheet" href="/css/{{this}}">
+    {{/each}}
+</head>
+<body>
+    {{{body}}}
+    {{#each jsscripts}}
+    <script src="/scripts/{{this}}"></script>
+    {{/each}}
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Update Dealers</title>
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+      <button>Menu</button>
+      <div class="menu_links">
+          <a href="/">Index</a>
+          <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+      </div>
+    </div>
+   </div>
+    <div class="table_container">
+    <h2>Update:</h2>
+    <form method="GET">
+      {{#each dealer}}
+      <label for="dealer_fname">First Name:</label>
+      <input type="text" id="dealer_fname" value="{{dealer_fname}}"><br>
+      <label for="dealer_lname">Last Name:</label>
+      <input type="text" id="dealer_lname" value="{{dealer_lname}}"><br>
+      <label for="dealer_age">Age:</label>
+      <input type="text" id="dealer_age" value="{{dealer_age}}"><br>
+      <label for="supervisor">Supervisor:</label>
+      <select id="supervisor" value="{{supervisor_fname}} {{supervisor_lname}}">
+      {{/each}}
+        {{#each sup}}
+        <option value="{{supervisor_ID}}">{{supervisor_fname}} {{supervisor_lname}}</option>
+        {{/each}}
+      </select><br>
+      {{#each dealer}}
+      <button type="button" id="updateButton" value="{{dealer_ID}}" class="buttons">Update</button>
+      {{/each}}
+      <button type="button" id="cancelButton" class="buttons">Cancel</button>
+    </form>
+    </div>
+
+ </body>
+</html>

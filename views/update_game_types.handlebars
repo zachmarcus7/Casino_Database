@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Game Types</title>
+
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+      <button>Menu</button>
+      <div class="menu_links">
+          <a href="/">Index</a>
+          <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+      </div>
+    </div>
+   </div>
+
+    <div class="table_container">
+    <h2>Update:</h2>
+    <form method="GET">
+      <label for="name">Name:</label>
+      <input type="text" id="name" value="{{game_type.name}}"><br>
+      <label for="description">Description:</label>
+      <input type="text" id="description" value="{{game_type.description}}"><br>
+      <label for="type_ID" hidden></label>
+      <input type="number" value="{{game_type.game_type_ID}}" hidden>
+    </form>
+    <input type="submit" value="Update" class="buttons" onclick="updateButton({{game_type.game_type_ID}})">
+    <a href="/Edit_Game_Types" class ="button_link" id="back_link">Cancel</a>
+
+    </div>
+
+  
+    <!-- Javascript stuff for DOM manipulation, to be implemented later on--> 
+    <input type="submit" hidden id="mainButton">
+    <a hidden id="goToUpdate"></a>
+  
+
+
+    <script src="/scripts/update_game_types.js"></script>
+ </body>
+</html>

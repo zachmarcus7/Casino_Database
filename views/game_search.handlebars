@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Game Search</title>
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+      <button>Menu</button>
+      <div class="menu_links">
+          <a href="/">Index</a>
+          <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+      </div>
+    </div>
+   </div>
+
+  <div class="table_container">
+    <h2>Search Game:</h2>
+    <form method="GET" id="form_container">
+    <span><input type="radio" value="type" id="game_type" name="choice">Game Type</span><input type="text" id="game_type_text"><br>
+    <span><input type="radio" value="table" id="table_id" name="choice">Table ID Number</span><input type="text" id="table_id_text"><br>
+    <span><input type="radio" value="date" id="last_name" name="choice">Dealer's Last Name</span><input type="text" id="last_name_text"><br>
+    <input type="button" value="Search" id="searchGame" name="search" class="buttons" onclick="searchButton()">
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Games:</h2>
+        <thead>
+          <tr>
+            <th>Game ID</th>
+            <th>Game Type</th>
+            <th>Amount Earned</th>
+            <th>Date</th>
+            <th>Table ID</th>
+            <th>Dealer's First Name</th>
+            <th>Dealer's Last Name</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+	      </tbody>
+          {{#each rows}}
+          <tr>
+            <td>{{game_ID}}</td>
+            <td>{{name}}
+            <td>{{amount_earned}}</td>
+            <td>{{date}}</td>
+            <td>{{table_ID}}</td>
+            <td>{{dealer_fname}}</td>
+            <td>{{dealer_lname}}</td>
+          </tr>
+          {{/each}}
+      </table>
+  </div>
+
+
+  <!-- used for sending get requests to server -->
+  <a href="" id="search_link" hidden></a>
+  
+
+	 <script src="/scripts/game_search.js"></script>
+ </body>
+</html>
