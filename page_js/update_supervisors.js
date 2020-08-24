@@ -15,7 +15,7 @@ module.exports = function(){
      * Input:   mysql ; mysql object
      * Input:   context ; object to hold results
      * Input:   supervisor ; supervisor ID
-     * Input:   complete ; function from example database that is called on successful completion of mysql call
+     * Input:   complete ; function that is called on successful completion of mysql call
      * Output:  n/a
      */
     function getTable(res, mysql, context, supervisor, complete){

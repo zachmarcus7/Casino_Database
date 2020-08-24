@@ -14,7 +14,7 @@ module.exports = function(){
      * Input:   res ; response variable from router get transaction
      * Input:   mysql ; mysql object
      * Input:   context ; object to hold results
-     * Input:   complete ; function from example database that is called on successful completion of mysql call
+     * Input:   complete ; function that is called on successful completion of mysql call
      * Output:  n/a
      */
     function getTable(res, mysql, context, complete){
