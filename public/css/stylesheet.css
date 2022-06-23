@@ -1,0 +1,251 @@
+/* Main style sheet for the final project */
+
+body {
+	background-color: #dce0dd;
+}
+
+
+/* header, text stylings */
+
+header {
+	font-size: 2em;
+	font-family: "Arial";
+}
+
+h2, li, a, th, td, label, p, span {
+	font-family: "Arial";
+}
+
+h2 {
+	padding-left: 5px;
+	color: white;
+	background-color: #38414f;
+	margin-top: 0px;
+	padding: 10px;
+}
+
+.top_container {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+/* general containers */
+
+.table_container {
+	background-color: #90949e;
+	width: 50%;
+	border-radius: 5px;
+	padding-bottom: 6px;
+	margin-top: 10px;
+	border: solid 1px black;
+}
+
+.search_container {
+	background-color: #90949e;
+	width: 60%;
+	border-radius: 5px;
+	padding-bottom: 6px;
+	margin-top: 10px;
+	border: solid 1px black;
+}
+
+.search_container_two {
+	background-color: #90949e;
+	width: 70%;
+	border-radius: 5px;
+	padding-bottom: 6px;
+	margin-top: 10px;
+	border: solid 1px black;
+}
+
+.list_container {
+	background-color: #90949e;
+	width: 40%;
+	border-radius: 5px;
+	padding-bottom: 6px;
+	margin-top: 15px;
+	border: solid 1px black;
+}
+
+.games_container {
+	margin-left: 20px;
+	height: 80%;
+}
+
+.list_container li a {
+	color: #070d1f;
+	text-decoration: none;
+}
+
+#head {
+    text-decoration: none;
+    color: white;
+}
+
+.list_container ul li{
+	padding-top: 7px;
+	padding-left: 14px;
+}
+
+.list_container li a:hover {
+	color: white;
+}
+
+.tables_list {
+	list-style-type: none;
+}
+
+table th {
+	background-color: #1d2423;
+	color: white;
+}
+
+select {
+	width: 176px;
+}
+
+
+/* button stylings */
+
+.buttons, .deleteButton, .updateButton, .help_button {
+	background-color: #34a85f;
+	border-style: none;
+	border-radius: 5px;
+	padding: 7px;
+	color: white;
+}
+
+.buttons:hover, .deleteButton:hover, .updateButton:hover, .help_button:hover {
+	background-color: #227841;
+	border-top: none;
+	border-left: none;
+}
+
+.buttons:active, .deleteButton:active, .updateButton:active, .help_button:active {
+	background-color: #154225;
+}
+
+
+/* for text inputs */
+input {
+	border-color: #cedbd3;
+	border-width: thin;
+	border-radius: 2.5px;
+}
+
+td {
+	background-color: white;
+}
+
+
+label {
+	text-align: left;
+	display: inline-block;
+	width: 180px;
+	margin-left: 10px;
+}
+
+span {
+	text-align: left;
+	display: inline-block;
+	width: 170px;
+	margin-left: 10px;
+}
+
+.main_header {
+	background-color: #38414f;
+	border-style: none;
+	border-radius: 5px;
+	padding: 7px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	top: 0px;
+	left: 0px;
+}
+
+.main_header header {
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+/* menu stylings */
+
+.menu {
+	height: 50px;
+	width: 150px;
+}
+
+.menu:hover .menu_links {
+	display: block;
+}
+
+.menu_links {
+	display: none;
+	position: absolute;
+	background-color: #38414f;
+	border: solid 1px white;
+}
+
+.menu_links a {
+	display: block;
+	text-decoration: none;
+	border: solid 1px white;
+	color: white;
+	font-weight: lighter;
+	padding: 5px;
+}
+
+.menu_links a:hover {
+	background-color: #1d2928;
+}
+
+.menu button {
+	background-color: #38414f;
+	border: 1px solid white;
+	padding: 7px;
+	color: white;
+	height: 50px;
+	width: 141px;
+	font-size: large;
+	position: relative;
+}
+
+.menu button:hover {
+	background-color: #1d2928;
+}
+
+li a {
+	font-weight: bold;
+	font-style: italic;
+	font-size: large;
+}
+
+
+/* edit page stylings */
+
+.button_link {
+	background-color: #34a85f;
+	border-style: none;
+	border-radius: 5px;
+	padding: 7px;
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	cursor: default;
+}
+
+.button_link:hover {
+	background-color: #227841;
+	border-top: none;
+	border-left: none;
+	cursor: default;
+}
+
+.button_link:active {
+	background-color: #154225;
+	cursor: default;
+}
+

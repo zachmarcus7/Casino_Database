@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Qualified Dealers</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+  <a href="/">Index</a>
+
+  <header>Qualified_Dealers</header>
+
+  <div class="table_container">
+    <h2>Add Qualified_Dealers Relation:</h2>
+    <form method="POST">
+        <label for="qualification_id">Qualification ID</label>
+        <input type="number" id="qualification_id"><br>
+        <label for="dealer_id">Dealer ID</label>
+        <input type="numer" id="dealer_id"><br>
+        <input type="submit" value="Add Tables_Dealers" id="addTD" name="insert" class="buttons">
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Qualified Dealers:</h2>
+        <thead>
+          <tr>
+            <th>Qualification ID</th>
+            <th>Dealer ID</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          </tbody>
+          <tr>
+            <td>546</td>
+            <td>4</td>
+      </table>
+  </div>
+
+    <script src="script.js"></script>
+ </body>
+</html>

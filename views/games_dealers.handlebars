@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Games Dealers</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+  <a href="/">Index</a>
+
+  <header>Games_Dealers</header>
+
+  <div class="table_container">
+    <h2>Add Games_Dealers Relation:</h2>
+    <form method="POST">
+        <label for="Game_id">Game ID</label>
+        <input type="number" id="game_id"><br>
+        <label for="dealer_id">Dealer ID</label>
+        <input type="numer" id="dealer_id"><br>
+        <input type="submit" value="Add Games_Dealers" id="addTD" name="insert" class="buttons">
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Games Dealers:</h2>
+        <thead>
+          <tr>
+            <th>Game ID</th>
+            <th>Dealer ID</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          </tbody>
+          <tr>
+            <td>546</td>
+            <td>4</td>
+      </table>
+  </div>
+
+    <script src="script.js"></script>
+ </body>
+</html>

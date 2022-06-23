@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Search Dealers</title>
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+      <button>Menu</button>
+      <div class="menu_links">
+          <a href="/">Index</a>
+          <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+      </div>
+    </div>
+   </div>
+
+  <div class="search_container_two">
+    <h2>Search Dealers:</h2>
+    <form method="GET">
+    <label>Parameter 1:</label><input id="first_p" type="text">
+    <label>Choose a column:</label>
+    <select id="col0">
+      <option value="dealer_ID">Dealer ID</option>
+      <option value="dealer_fname">First Name</option>
+      <option value="dealer_lname">Last Name</option>
+      <option value="dealer_age">Age</option>
+      <option value="supervisor">Supervisor ID</option>
+    </select>
+    <br>
+
+    <label>Parameter 2:</label><input id="second_p" type="text">
+    <label>Choose a column:</label>
+    <select id="col1">
+      <option value="dealer_ID">Dealer ID</option>
+      <option value="dealer_fname">First Name</option>
+      <option value="dealer_lname">Last Name</option>
+      <option value="dealer_age">Age</option>
+      <option value="supervisor">Supervisor ID</option>
+    </select>
+    <input type="radio" id="l0a" name="l0" value="AND">AND<input type="radio" id="l0o" name="l0" value="OR">OR<input type="radio" id="l0n" name="l0" value="NOT">NOT
+    <br>
+
+    <label>Parameter 3:</label><input id="third_p" type="text">
+    <label>Choose a column:</label>
+    <select id="col2">
+      <option value="dealer_ID">Dealer ID</option>
+      <option value="dealer_fname">First Name</option>
+      <option value="dealer_lname">Last Name</option>
+      <option value="dealer_age">Age</option>
+      <option value="supervisor">Supervisor ID</option>
+    </select>
+    <input type="radio" id="l1a" name="l1" value="AND">AND<input type="radio" id="l1o" name="l1" value="OR">OR<input type="radio" id="l1n" name="l1" value="NOT">NOT
+    <br>
+
+    <label>Parameter 4:</label><input id="fourth_p" type="text">
+    <label>Choose a column:</label>
+    <select id="col3">
+      <option value="dealer_ID">Dealer ID</option>
+      <option value="dealer_fname">First Name</option>
+      <option value="dealer_lname">Last Name</option>
+      <option value="dealer_age">Age</option>
+      <option value="supervisor">Supervisor ID</option>
+    </select>
+    <input type="radio" id="l2a" name="l2" value="AND">AND<input type="radio" id="l2o" name="l2" value="OR">OR<input type="radio" id="l2n" name="l2" value="NOT">NOT
+    <br>
+
+    <label>Parameter 5:</label><input id="fifth_p" type="text">
+    <label>Choose a column:</label>
+    <select id="col4">
+      <option value="dealer_ID">Dealer ID</option>
+      <option value="dealer_fname">First Name</option>
+      <option value="dealer_lname">Last Name</option>
+      <option value="dealer_age">Age</option>
+      <option value="supervisor">Supervisor ID</option>
+    </select>
+    <input type="radio" id="l3a" name="l3" value="AND">AND<input type="radio" id="l3o" name="l3" value="OR">OR<input type="radio" id="l3n" name="l3" value="NOT">NOT
+    <br>
+
+      <button value="Search" id="searchDealers" name="search" class="buttons">Search</button>
+      <button value="Reset" id="resetDealers" name="reset" class="buttons">Reset</button>
+      <button type="button" name="help" class="help_button" onclick="alert('The logic for the search doesn\'t use parenthesis in the final operation. First Enter a value for Parameter 1 and choose a column to search. Then move on to the next Parameter and choose a logical binding to the above parameter set. Repeat for the desired number of parameters up to 5. However, searches are best left kept simple.')">Help</button>
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Results:</h2>
+        <thead>
+          <tr>
+            <th>Dealer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Supervisor</th>
+            <th>Supervisor ID</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          {{#each rows}}
+          <tr>
+            <td>{{dealer_ID}}</td>
+            <td>{{dealer_fname}}</td>
+            <td>{{dealer_lname}}</td>
+            <td>{{dealer_age}}</td>
+            <td>{{supervisor_fname}} {{supervisor_lname}}</td>
+            <td>{{supervisor_ID}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+
+
+ </body>
+</html>

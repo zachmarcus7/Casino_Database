@@ -1,0 +1,17 @@
+{
+  "name": "cs340_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gambler_tracker.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zach Marcus",
+  "license": "ISC"
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Tables Games</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+  <a href="/">Index</a>
+
+  <header>Tables_Games</header>
+
+  <div class="table_container">
+    <h2>Add Tables_Games Relation:</h2>
+    <form method="POST">
+        <label for="table_id">Table ID</label>
+        <input type="number" id="table_id"><br>
+        <label for="game_id">Game ID</label>
+        <input type="number" id="game_id"><br>
+        <input type="submit" value="Add Tables_Games" id="addTD" name="insert" class="buttons">
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Tables Games:</h2>
+        <thead>
+          <tr>
+            <th>Table ID</th>
+            <th>Game ID</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          </tbody>
+          <tr>
+            <td>546</td>
+            <td>4</td>
+      </table>
+  </div>
+
+    <script src="script.js"></script>
+ </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Dealers</title>
+ </head>
+ <body>
+ <div class="main_header">
+    <div><header><a href="/" id="head">Gambler Tracker Database</a></header></div>
+    <div class="menu">
+      <button>Menu</button>
+      <div class="menu_links">
+          <a href="/">Index</a>
+          <a href="/Dealers">Dealers</a>
+              <a href="/Tables">Tables</a>
+              <a href="/Games">Games</a>
+              <a href="/Game_types">Game Types</a>
+              <a href="/Supervisors">Supervisors</a>
+              <a href="/Qualifications">Qualifications</a>
+              <a href="/Game_search">Search Games</a>
+              <a href="/edit_game_types">Edit Game Type</a>
+              <a href="/Dealer_Search">Search Dealers</a>
+              <a href="/Edit_Qualifications">Edit Qualifications</a>
+              <a href="/Edit_Dealers">Edit Dealers</a>
+              <a href="/Edit_Supervisors">Edit Supervisors</a>
+      </div>
+    </div>
+   </div>
+
+  <div class="table_container">
+    <h2>Add Dealer:</h2>
+    <form>
+        <label for="dealer_fname">First Name:</label>
+        <input type="text" id="dealer_fname"><br>
+        <label for="dealer_lname">Last Name:</label>
+        <input type="text" id="dealer_lname"><br>
+        <label for="dealer_age">Age:</label>
+        <input type="number" id="dealer_age"><br>
+        <label for="supervisor">Supervisor:</label>
+        <select id="supervisor">
+          <option value=""></option>
+          {{#each supervisors}}
+          <option value="{{supervisor_ID}}">{{supervisor_fname}} {{supervisor_lname}}</option>
+          {{/each}}
+        </select><br>
+        <label for="qualification">Qualification:</label>
+        <select id="qualification_ID">
+          <option value=""></option>
+          {{#each qualifications}}
+          <option value="{{qualification_ID}}">{{qualification_name}}</option>
+          {{/each}}
+        </select><br>
+        <button type="button" id="addDealer" class="buttons">Add Dealer</button>
+    </form>
+  </div>
+
+  <div class="table_container">
+    <table id="table">
+      <h2>Dealers:</h2>
+        <thead>
+          <tr>
+            <th>Dealer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Supervisor Name</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          </tbody>
+          {{#each rows}}
+          <tr>
+            <td>{{dealer_ID}}</td>
+            <td>{{dealer_fname}}</td>
+            <td>{{dealer_lname}}</td>
+            <td>{{dealer_age}}</td>
+            <td>{{supervisor_fname}} {{supervisor_lname}}</td>
+          </tr>
+          {{/each}}
+      </table>
+  </div>
+
+ </body>
+</html>
